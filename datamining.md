@@ -6,7 +6,7 @@
 	!python
 	from Quebec import Akim Couture
 
-	More infos later...()
+	More infos later()
 
 
 ---
