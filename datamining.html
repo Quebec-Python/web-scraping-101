@@ -81,7 +81,7 @@
             </aside>
             
             <aside class="page_number">
-              1/16
+              1/19
             </aside>
           </footer>
         </div>
@@ -96,8 +96,6 @@
             
             
             <section><div class="highlight"><pre><span class="kn">from</span> <span class="nn">Quebec</span> <span class="kn">import</span> <span class="n">Akim</span> <span class="n">Couture</span>
-
-<span class="n">More</span> <span class="n">infos</span> <span class="n">later</span><span class="o">...</span><span class="p">(</span><span class="n">je</span> <span class="n">vais</span> <span class="err">é</span><span class="n">diter</span> <span class="n">Bernard</span><span class="p">)</span>
 </pre></div>
 </section>
             
@@ -115,38 +113,7 @@
             </aside>
             
             <aside class="page_number">
-              2/16
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: datamining.md -->
-      <div class="slide-wrapper">
-        <div class="slide has_notes">
-          <div class="inner">
-            
-            <header><h1>Qu'est-ce que le «Web Scraping» ?</h1></header>
-            
-            
-            <section><p class="notes">plop</p>
-<h3>Définition : « Le Web scraping (parfois appelé Harvesting) est une technique d'extraction du contenu de sites Web, via un script ou un programme, dans le but de le transformer pour permettre son utilisation dans un autre contexte » [1]</h3></section>
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="datamining.md">datamining.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              3/16
+              2/19
             </aside>
           </footer>
         </div>
@@ -157,12 +124,12 @@
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Outils</h1></header>
+            <header><h1>Définir «Web Scraping» ?</h1></header>
             
             
-            <section><p><img alt="Scrapy" src="Scrapy_logo.jpg" /></p>
-<p>Partie pour bernard :</p>
-<p>Je vais mettre des notes ici dans le présentor mode pour donner plus d'infos sur scrapy je penses ou je devrais faire une slide pendant ou après l'installation pour donner plus d'infos dessus selon toi ? Sachant que l'installation va prendre 1-2-3min. ! Idéal pour en parler selon moi sinon lorsque je montres la photo pcq je captes l'attention des auditeurs !</p></section>
+            <section><blockquote>
+<p>Le Web scraping (parfois appelé Harvesting) est une technique d'extraction du contenu de sites Web, via un script ou un programme, dans le but de le transformer pour permettre son utilisation dans un autre contexte.</p>
+</blockquote></section>
             
           </div>
           <div class="presenter_notes">
@@ -178,7 +145,69 @@
             </aside>
             
             <aside class="page_number">
-              4/16
+              3/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: datamining.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            
+            <section><p><img alt="Scrapy" src="Scrapy_logo.jpg" /></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="datamining.md">datamining.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              4/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: datamining.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h3>Pourquoi l'utiliser ?</h3></header>
+            
+            
+            <section><ul>
+<li>100% Python !</li>
+<li>Un des plus populaires donc grosse communauté</li>
+<li>Un environnement pour crée plusieurs «spiders»</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="datamining.md">datamining.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              5/19
             </aside>
           </footer>
         </div>
@@ -193,20 +222,48 @@
             
             
             <section><h2>Dépendences :</h2>
-<p>Python 2.7
-lxml
-OpenSSL
-pip or easy_install</p>
-<h2>Lets do it:</h2>
-<pre><code>virtualenv env  
-source venv/bin/activate
+<ul>
+<li>Python 2.7</li>
+<li>lxml</li>
+<li>OpenSSL</li>
+<li>pip or easy_install</li>
+</ul></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="datamining.md">datamining.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              6/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: datamining.md -->
+      <div class="slide-wrapper">
+        <div class="slide has_code">
+          <div class="inner">
+            
+            
+            <section><div class="highlight"><pre>mkdir scraping
+virtualenv venv
+<span class="nb">source </span>venv/bin/activate
 pip install Scrapy
-Enjoy !
-</code></pre>
-<h2>Windows :</h2>
-<p><a href="http://doc.scrapy.org/en/latest/intro/install.html">Click Here Windows Users</a></p>
-<h2>Ubuntu :</h2>
-<p>N'utilisez pas python-scrapy trop vieux !</p></section>
+</pre></div>
+
+<p>Enjoy !</p>
+<p>Windows : scrapy docs (vous devez installer toutes les dépences manuellement)</p>
+<p>Ubuntu : N'utilisez pas python-scrapy trop vieux !</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -222,7 +279,7 @@ Enjoy !
             </aside>
             
             <aside class="page_number">
-              5/16
+              7/19
             </aside>
           </footer>
         </div>
@@ -233,35 +290,7 @@ Enjoy !
         <div class="slide">
           <div class="inner">
             
-            <header><h1>Qu'est-ce Scrapy ici ? ou lors de l'image ?</h1></header>
-            
-            
-          </div>
-          <div class="presenter_notes">
-            <header><h1>Notes</h1></header>
-            <section>
-            
-            </section>
-          </div>
-          <footer>
-            
-            <aside class="source">
-              Source: <a href="datamining.md">datamining.md</a>
-            </aside>
-            
-            <aside class="page_number">
-              6/16
-            </aside>
-          </footer>
-        </div>
-      </div>
-      
-      <!-- slide source: datamining.md -->
-      <div class="slide-wrapper">
-        <div class="slide">
-          <div class="inner">
-            
-            <header><h1>Comment ça marche ? (sous le capot)</h1></header>
+            <header><h1>Comment ça marche ?</h1></header>
             
             
             <section><p><img alt="" src="scrapy_architecture.png" /></p></section>
@@ -280,7 +309,7 @@ Enjoy !
             </aside>
             
             <aside class="page_number">
-              7/16
+              8/19
             </aside>
           </footer>
         </div>
@@ -288,15 +317,15 @@ Enjoy !
       
       <!-- slide source: datamining.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
+            <header><h1>HN Scraping</h1></header>
             
-            <section><p><strong>Pourquoi l'utiliser ?</strong></p>
-<p>-Python scrapper !
--Un des plus populaires donc grosse communauté
--Un environnement pour crée plusieurs «spiders»
-- Bernard Notes : Je vais en rajouter au fur et à mesure et également des contres après la présentation des compétiteurs. ps2: probablement la mettre avant l'installation.</p></section>
+            
+            <section><div class="highlight"><pre>scrapy startproject hn
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -312,7 +341,7 @@ Enjoy !
             </aside>
             
             <aside class="page_number">
-              8/16
+              9/19
             </aside>
           </footer>
         </div>
@@ -320,14 +349,28 @@ Enjoy !
       
       <!-- slide source: datamining.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
             
-            <section><p>Who use it ? </p>
-<p>World Governement Data et bien d'autres !
-<a href="http://scrapy.org/companies/">Listes des compagnies</a></p>
-<p>Je vais probablement le mettre plus tôt finalement cette slide. vu que les gens ont deja l'env prêt je pourrais déjà leurs montrer du code.</p></section>
+            <section><div class="highlight"><pre>hn/
+
+    scrapy.cfg <span class="c"># le fichier de configuration du projet</span>
+
+    hn/ <span class="c"># le module du projet</span>
+
+        __init__.py
+
+        items.py <span class="c"># fichier «items»</span>
+
+        pipelines.py <span class="c"># fichier «pipelines»</span>
+
+        settings.py <span class="c">#</span>
+
+    spiders/ <span class="c"># nos araignées !</span>
+        __init__.py
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -343,7 +386,7 @@ Enjoy !
             </aside>
             
             <aside class="page_number">
-              9/16
+              10/19
             </aside>
           </footer>
         </div>
@@ -351,11 +394,21 @@ Enjoy !
       
       <!-- slide source: datamining.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
+            <header><h2>Items.py</h2></header>
             
-            <section><p>Scraping 101 iTunes</p></section>
+            
+            <section><div class="highlight"><pre><span class="kn">from</span> <span class="nn">scrapy.item</span> <span class="kn">import</span> <span class="n">Item</span><span class="p">,</span> <span class="n">Field</span>
+
+<span class="k">class</span> <span class="nc">HnItem</span><span class="p">(</span><span class="n">Item</span><span class="p">):</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">Field</span><span class="p">()</span>
+        <span class="n">link</span> <span class="o">=</span> <span class="n">Field</span><span class="p">()</span>
+</pre></div>
+
+<p>Cela permet de ne pas prendre des champs par erreur.</p>
+<p>La classe Item est très similaire à un dictionnaire Python.</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -371,7 +424,7 @@ Enjoy !
             </aside>
             
             <aside class="page_number">
-              10/16
+              11/19
             </aside>
           </footer>
         </div>
@@ -382,8 +435,18 @@ Enjoy !
         <div class="slide">
           <div class="inner">
             
+            <header><h2>Les araignées (spider)</h2></header>
             
-            <section><p>Slides x à propos de iTunes</p></section>
+            
+            <section><blockquote>
+<p>Le code qui définit qu'est-ce que notre «crawler» va parser.</p>
+</blockquote>
+<h2>Nous allons donner de la logique à nos araignées !</h2>
+<ul>
+<li>nom : pour identifier l'araignée</li>
+<li>start_urls : le début d' une liste de liens internet</li>
+<li>parse() : La  méthode qui nous envoye une réponse lorsque l'url est téléchargé</li>
+</ul></section>
             
           </div>
           <div class="presenter_notes">
@@ -399,7 +462,7 @@ Enjoy !
             </aside>
             
             <aside class="page_number">
-              11/16
+              12/19
             </aside>
           </footer>
         </div>
@@ -407,11 +470,30 @@ Enjoy !
       
       <!-- slide source: datamining.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
+            <header><h3>hn_spider.py</h3></header>
             
-            <section><p>Les autres features</p></section>
+            
+            <section><div class="highlight"><pre><span class="kn">from</span> <span class="nn">scrapy.spider</span> <span class="kn">import</span> <span class="n">BaseSpider</span>
+<span class="kn">from</span> <span class="nn">scrapy.selector</span> <span class="kn">import</span> <span class="n">Selector</span>
+
+<span class="k">class</span> <span class="nc">HnSpider</span><span class="p">(</span><span class="n">BaseSpider</span><span class="p">):</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s">&#39;hn&#39;</span> <span class="c">#nom</span>
+    <span class="n">allowed_domains</span> <span class="o">=</span> <span class="p">[]</span> <span class="c">#</span>
+    <span class="n">start_urls</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;http://news.ycombinator.com&#39;</span><span class="p">]</span>
+
+<span class="k">def</span> <span class="nf">parse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+    <span class="n">sel</span> <span class="o">=</span> <span class="n">Selector</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+    <span class="n">sites</span> <span class="o">=</span> <span class="n">sel</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s">&#39;//td[@class=&quot;title&quot;]&#39;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">site</span> <span class="ow">in</span> <span class="n">sites</span><span class="p">:</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">site</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s">&#39;a/text()&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">extract</span><span class="p">()</span>
+        <span class="n">link</span> <span class="o">=</span> <span class="n">site</span><span class="o">.</span><span class="n">xpath</span><span class="p">(</span><span class="s">&#39;a/@href&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">extract</span><span class="p">()</span>
+
+        <span class="k">print</span> <span class="n">title</span><span class="p">,</span> <span class="n">link</span>
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -427,7 +509,7 @@ Enjoy !
             </aside>
             
             <aside class="page_number">
-              12/16
+              13/19
             </aside>
           </footer>
         </div>
@@ -438,8 +520,8 @@ Enjoy !
         <div class="slide">
           <div class="inner">
             
+            <header><h1>Beautiful Soup</h1></header>
             
-            <section><p>Concurrent </p></section>
             
           </div>
           <div class="presenter_notes">
@@ -455,7 +537,7 @@ Enjoy !
             </aside>
             
             <aside class="page_number">
-              13/16
+              14/19
             </aside>
           </footer>
         </div>
@@ -463,11 +545,15 @@ Enjoy !
       
       <!-- slide source: datamining.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
+            <header><h1>Crawl !</h1></header>
             
-            <section><p>Links</p></section>
+            
+            <section><div class="highlight"><pre>scrapy crawl hn
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -483,7 +569,7 @@ Enjoy !
             </aside>
             
             <aside class="page_number">
-              14/16
+              15/19
             </aside>
           </footer>
         </div>
@@ -491,11 +577,15 @@ Enjoy !
       
       <!-- slide source: datamining.md -->
       <div class="slide-wrapper">
-        <div class="slide">
+        <div class="slide has_code">
           <div class="inner">
             
+            <header><h1>JSON</h1></header>
             
-            <section><p>Remerciement </p></section>
+            
+            <section><div class="highlight"><pre>scrapy crawl hn -o items.json -t json
+</pre></div>
+</section>
             
           </div>
           <div class="presenter_notes">
@@ -511,7 +601,7 @@ Enjoy !
             </aside>
             
             <aside class="page_number">
-              15/16
+              16/19
             </aside>
           </footer>
         </div>
@@ -522,8 +612,8 @@ Enjoy !
         <div class="slide">
           <div class="inner">
             
+            <header><h1>Next ? Atelier ? web-scraping 102 ?</h1></header>
             
-            <section><p>Questions</p></section>
             
           </div>
           <div class="presenter_notes">
@@ -539,7 +629,63 @@ Enjoy !
             </aside>
             
             <aside class="page_number">
-              16/16
+              17/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: datamining.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Remerciement</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="datamining.md">datamining.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              18/19
+            </aside>
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: datamining.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h1>Questions ?</h1></header>
+            
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="datamining.md">datamining.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              19/19
             </aside>
           </footer>
         </div>
@@ -567,43 +713,43 @@ Enjoy !
       
       
       <tr id="toc-row-3">
-        <th><a href="#slide3">Qu'est-ce que le «Web Scraping» ?</a></th>
+        <th><a href="#slide3">Définir «Web Scraping» ?</a></th>
         <td><a href="#slide3">3</a></td>
       </tr>
       
       
       <tr id="toc-row-4">
-        <th><a href="#slide4">Outils</a></th>
+        <th><a href="#slide4">-</a></th>
         <td><a href="#slide4">4</a></td>
       </tr>
       
       
       <tr id="toc-row-5">
-        <th><a href="#slide5">Installation</a></th>
+        <th><a href="#slide5">-</a></th>
         <td><a href="#slide5">5</a></td>
       </tr>
       
       
       <tr id="toc-row-6">
-        <th><a href="#slide6">Qu'est-ce Scrapy ici ? ou lors de l'image ?</a></th>
+        <th><a href="#slide6">Installation</a></th>
         <td><a href="#slide6">6</a></td>
       </tr>
       
       
       <tr id="toc-row-7">
-        <th><a href="#slide7">Comment ça marche ? (sous le capot)</a></th>
+        <th><a href="#slide7">-</a></th>
         <td><a href="#slide7">7</a></td>
       </tr>
       
       
       <tr id="toc-row-8">
-        <th><a href="#slide8">-</a></th>
+        <th><a href="#slide8">Comment ça marche ?</a></th>
         <td><a href="#slide8">8</a></td>
       </tr>
       
       
       <tr id="toc-row-9">
-        <th><a href="#slide9">-</a></th>
+        <th><a href="#slide9">HN Scraping</a></th>
         <td><a href="#slide9">9</a></td>
       </tr>
       
@@ -613,17 +759,17 @@ Enjoy !
         <td><a href="#slide10">10</a></td>
       </tr>
       
-      
-      <tr id="toc-row-11">
-        <th><a href="#slide11">-</a></th>
-        <td><a href="#slide11">11</a></td>
-      </tr>
-      
-      
-      <tr id="toc-row-12">
-        <th><a href="#slide12">-</a></th>
-        <td><a href="#slide12">12</a></td>
-      </tr>
+        
+        <tr id="toc-row-11" class="sub">
+          <th><a href="#slide11">Items.py</a></th>
+          <td><a href="#slide11">11</a></td>
+        </tr>
+        
+        <tr id="toc-row-12" class="sub">
+          <th><a href="#slide12">Les araignées (spider)</a></th>
+          <td><a href="#slide12">12</a></td>
+        </tr>
+        
       
       
       <tr id="toc-row-13">
@@ -633,20 +779,38 @@ Enjoy !
       
       
       <tr id="toc-row-14">
-        <th><a href="#slide14">-</a></th>
+        <th><a href="#slide14">Beautiful Soup</a></th>
         <td><a href="#slide14">14</a></td>
       </tr>
       
       
       <tr id="toc-row-15">
-        <th><a href="#slide15">-</a></th>
+        <th><a href="#slide15">Crawl !</a></th>
         <td><a href="#slide15">15</a></td>
       </tr>
       
       
       <tr id="toc-row-16">
-        <th><a href="#slide16">-</a></th>
+        <th><a href="#slide16">JSON</a></th>
         <td><a href="#slide16">16</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-17">
+        <th><a href="#slide17">Next ? Atelier ? web-scraping 102 ?</a></th>
+        <td><a href="#slide17">17</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-18">
+        <th><a href="#slide18">Remerciement</a></th>
+        <td><a href="#slide18">18</a></td>
+      </tr>
+      
+      
+      <tr id="toc-row-19">
+        <th><a href="#slide19">Questions ?</a></th>
+        <td><a href="#slide19">19</a></td>
       </tr>
       
       

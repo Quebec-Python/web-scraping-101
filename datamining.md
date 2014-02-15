@@ -6,25 +6,23 @@
 	!python
 	from Quebec import Akim Couture
 
-	More infos later()
-
-
 ---
 
-#Qu'est-ce que le «Web Scraping» ?
+#Définir «Web Scraping» ?
 
-.notes:plop
-
-###Définition : « Le Web scraping (parfois appelé Harvesting) est une technique d'extraction du contenu de sites Web, via un script ou un programme, dans le but de le transformer pour permettre son utilisation dans un autre contexte » [1]
+>Le Web scraping (parfois appelé Harvesting) est une technique d'extraction du contenu de sites Web, via un script ou un programme, dans le but de le transformer pour permettre son utilisation dans un autre contexte.
 
 ---
-#Outils
 
 ![Scrapy](Scrapy_logo.jpg)
 
-Partie pour bernard :
+---
 
-Je vais mettre des notes ici dans le présentor mode pour donner plus d'infos sur scrapy je penses ou je devrais faire une slide pendant ou après l'installation pour donner plus d'infos dessus selon toi ? Sachant que l'installation va prendre 1-2-3min. ! Idéal pour en parler selon moi sinon lorsque je montres la photo pcq je captes l'attention des auditeurs !
+###Pourquoi l'utiliser ?
+
+*	100% Python !
+*	Un des plus populaires donc grosse communauté
+*	Un environnement pour crée plusieurs «spiders»
 
 
 ---
@@ -33,82 +31,129 @@ Je vais mettre des notes ici dans le présentor mode pour donner plus d'infos su
 
 Dépendences :
 ----------
-Python 2.7
-lxml
-OpenSSL
-pip or easy_install
-
-Lets do it:
-----------
-	virtualenv env	
+*	Python 2.7
+*	lxml
+*	OpenSSL
+*	pip or easy_install
+ 
+---
+	!bash
+	mkdir scraping
+	virtualenv venv
 	source venv/bin/activate
 	pip install Scrapy
-	Enjoy !
+	
+Enjoy !
 
+Windows : scrapy docs (vous devez installer toutes les dépences manuellement)
 
-Windows :
-----------
-[Click Here Windows Users](http://doc.scrapy.org/en/latest/intro/install.html)
-
-Ubuntu :
-----------
-N'utilisez pas python-scrapy trop vieux !
+Ubuntu : N'utilisez pas python-scrapy trop vieux !
 
 ---
 
-#Qu'est-ce Scrapy ici ? ou lors de l'image ?
-
----
-
-#Comment ça marche ? (sous le capot)
+#Comment ça marche ?
 
 ![](scrapy_architecture.png)
 
 ---
+#HN Scraping
 
-**Pourquoi l'utiliser ?**
+	!bash 
 
--Python scrapper !
--Un des plus populaires donc grosse communauté
--Un environnement pour crée plusieurs «spiders»
-- Bernard Notes : Je vais en rajouter au fur et à mesure et également des contres après la présentation des compétiteurs. ps2: probablement la mettre avant l'installation.
+	scrapy startproject hn
+---
+	!bash
+	hn/
+
+		scrapy.cfg # le fichier de configuration du projet
+
+		hn/ # le module du projet
+
+			__init__.py
+
+			items.py # fichier «items»
+
+			pipelines.py # fichier «pipelines»
+
+			settings.py # 
+
+		spiders/ # nos araignées !
+			__init__.py
 
 ---
 
-Who use it ? 
+## Items.py
 
-World Governement Data et bien d'autres !
-[Listes des compagnies](http://scrapy.org/companies/)
+	!python
+	from scrapy.item import Item, Field
 
-Je vais probablement le mettre plus tôt finalement cette slide. vu que les gens ont deja l'env prêt je pourrais déjà leurs montrer du code.
+	class HnItem(Item):
+    		title = Field()
+    		link = Field()
+    
+Cela permet de ne pas prendre des champs par erreur.
+
+La classe Item est très similaire à un dictionnaire Python.
+
+
+---
+## Les araignées (spider)
+>Le code qui définit qu'est-ce que notre «crawler» va parser.
+
+Nous allons donner de la logique à nos araignées !
+----------
+*	nom : pour identifier l'araignée
+*	start_urls : le début d' une liste de liens internet
+*	parse() : La  méthode qui nous envoye une réponse lorsque l'url est téléchargé
+
 
 ---
 
-Scraping 101 iTunes
+###hn_spider.py
 
+	!python
+	from scrapy.spider import BaseSpider
+	from scrapy.selector import Selector
 
+	class HnSpider(BaseSpider):
+		name = 'hn' #nom
+		allowed_domains = [] #
+		start_urls = ['http://news.ycombinator.com']
+
+	def parse(self, response):
+		sel = Selector(response)
+		sites = sel.xpath('//td[@class="title"]')
+		for site in sites:
+			title = site.xpath('a/text()').extract()
+			link = site.xpath('a/@href').extract()
+
+			print title, link
+---
+
+#Beautiful Soup 
+
+	
+---
+#Crawl !
+
+	!bash 
+	
+	scrapy crawl hn
 
 ---
 
-Slides x à propos de iTunes
+#JSON
+	!bash
+	scrapy crawl hn -o items.json -t json
 
 ---
 
-Les autres features
+#Next ? Atelier ? web-scraping 102 ?
 
 ---
 
-Concurrent 
-
+#Remerciement
 ---
 
-Links
-
----
-
-Remerciement 
-
----
-
-Questions
+#Questions ?
 
