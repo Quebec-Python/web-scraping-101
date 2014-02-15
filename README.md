@@ -27,7 +27,7 @@ Voilà !
 
 ###Authors :
 
-Akim Couture ( [@akimqc](http://https://twitter.com/Akimqc) )
+Akim Couture ( [@akimqc](http://twitter.com/Akimqc) )
 
 avec la précieuse aide de :
 
